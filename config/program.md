@@ -7,10 +7,10 @@ This file was generated from `templates/program.md.in`. Template variables are
 resolved once during init/install; do not leave `{{...}}` placeholders in the
 generated `program.md`.
 
-This harness usually lives in a `myautoresearch/` subdirectory inside a host
+This harness usually lives in a `my-autoresearch/` subdirectory inside a host
 project. Treat the workspace configured in `config/autoresearch.config.json` as the
 project workspace. Runtime synchronization files and logs live under the
-configured output directory; stable harness files stay under `myautoresearch/`.
+configured output directory; stable harness files stay under `my-autoresearch/`.
 
 ## Runtime Contract
 
@@ -21,14 +21,14 @@ request.
 
 Every new agent session must begin by reading these files, in this order:
 
-1. `myautoresearch/config/program.md` - long-term operating rules.
-2. `myautoresearch/config/project.md` - current project objective, constraints,
+1. `my-autoresearch/config/program.md` - long-term operating rules.
+2. `my-autoresearch/config/project.md` - current project objective, constraints,
    metrics, and commands.
-3. `myautoresearch/state/run_state.json` - machine-readable current state.
-4. `myautoresearch/state/handoff.md` - previous agent's handoff guides.
-5. `myautoresearch/state/todo.md` - short-term task queue.
-6. `myautoresearch/state/plan.md` - medium-term experiment plan.
-7. `myautoresearch/results/results.tsv` - structured experiment history, if present.
+3. `my-autoresearch/state/run_state.json` - machine-readable current state.
+4. `my-autoresearch/state/handoff.md` - previous agent's handoff guides.
+5. `my-autoresearch/state/todo.md` - short-term task queue.
+6. `my-autoresearch/state/plan.md` - medium-term experiment plan.
+7. `my-autoresearch/results/results.tsv` - structured experiment history, if present.
 8. Relevant recent logs only as needed.
 
 Before editing or running long commands, summarize the current best result,
@@ -62,7 +62,7 @@ These files are the shared memory:
 
 These synchronization files are resolved through `autoresearch.config.json`.
 When `output_dir` is set, write the configured runtime files under that output
-directory rather than directly under `myautoresearch/`.
+directory rather than directly under `my-autoresearch/`.
 
 At the end of every session, update all relevant synchronization files before
 stopping. If no experiment was run, still update `handoff.md`,
@@ -80,7 +80,7 @@ file unless the user explicitly asks for cleanup.
 Keep the repository root readable. Root-level files should be stable project
 files, the configured output directory, or assignment-required paths.
 
-Preferred layout under `myautoresearch/`:
+Preferred layout under `my-autoresearch/`:
 
 - `autoresearch/logs/` - command logs from training, evaluation, rendering,
   crawling, simulations, or other project-specific jobs.
@@ -253,7 +253,7 @@ Recommended JSON shape:
   "expected_work_type": "experiment",
   "next_task": "Run the next planned comparison and evaluate the primary metric.",
   "reason": "The next task is an already specified experiment.",
-  "prompt": "Read myautoresearch/config/program.md first. Then read myautoresearch/config/project.md, then read myautoresearch/state/run_state.json, myautoresearch/state/handoff.md, myautoresearch/state/todo.md, myautoresearch/state/plan.md, and myautoresearch/results/results.tsv. Summarize current best result, active or blocked state, and next concrete action before editing or running long commands. Continue exactly one autoresearch loop iteration unless blocked.",
+  "prompt": "Read my-autoresearch/config/program.md first. Then read my-autoresearch/config/project.md, then read my-autoresearch/state/run_state.json, my-autoresearch/state/handoff.md, my-autoresearch/state/todo.md, my-autoresearch/state/plan.md, and my-autoresearch/results/results.tsv. Summarize current best result, active or blocked state, and next concrete action before editing or running long commands. Continue exactly one autoresearch loop iteration unless blocked.",
   "updated_at": "2026-05-14T00:00:00+08:00"
 }
 ```

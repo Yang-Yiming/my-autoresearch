@@ -1,6 +1,6 @@
-# myautoresearch
+# my-autoresearch
 
-`myautoresearch` is a reusable autoresearch harness meant to live inside an
+`my-autoresearch` is a reusable autoresearch harness meant to live inside an
 existing project as a subdirectory.
 
 It is inspired by [karpathy's autoresearch](https://github.com/karpathy/autoresearch)
@@ -212,10 +212,10 @@ Force actions work by reading pids from `run_state.json` and sending a signal.
 }
 ```
 
-`workspace_dir` is resolved relative to `myautoresearch/`. The default `..`
+`workspace_dir` is resolved relative to `my-autoresearch/`. The default `..`
 means the agent runs from the parent project directory.
 
-`output_dir` is resolved relative to `myautoresearch/`. With `output_dir: "."`,
+`output_dir` is resolved relative to `my-autoresearch/`. With `output_dir: "."`,
 runtime files resolve from the harness root. File paths in the `files` map
 separate different concerns:
 
@@ -263,7 +263,7 @@ stalled. In both cases, `supervisor.kill_grace_seconds` is the delay between
   "expected_work_type": "setup",
   "next_task": "Inspect the parent project and prepare the first concrete research task.",
   "reason": "A new harness should understand the host project first.",
-  "prompt": "Read myautoresearch/config/program.md first...",
+  "prompt": "Read my-autoresearch/config/program.md first...",
   "updated_at": "2026-05-14T00:00:00+08:00"
 }
 ```
@@ -310,7 +310,7 @@ Long-running project jobs should be recorded in this shape:
   "active_process": {
     "pid": 12345,
     "kind": "training",
-    "log_path": "myautoresearch/autoresearch/logs/run.log",
+    "log_path": "my-autoresearch/autoresearch/logs/run.log",
     "expected_output": "path/to/artifact",
     "started_at": "2026-05-14T00:00:00+08:00"
   }

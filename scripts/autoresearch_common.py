@@ -43,10 +43,10 @@ DEFAULT_SUPERVISOR = {
     "kill_grace_seconds": 15,
 }
 DEFAULT_PROMPT = (
-    "Read myautoresearch/config/program.md first. Then read myautoresearch/config/project.md, "
-    "then read myautoresearch/state/run_state.json, myautoresearch/state/handoff.md, "
-    "myautoresearch/state/todo.md, myautoresearch/state/plan.md, and "
-    "myautoresearch/results/results.tsv. Treat the configured workspace as the project "
+    "Read my-autoresearch/config/program.md first. Then read my-autoresearch/config/project.md, "
+    "then read my-autoresearch/state/run_state.json, my-autoresearch/state/handoff.md, "
+    "my-autoresearch/state/todo.md, my-autoresearch/state/plan.md, and "
+    "my-autoresearch/results/results.tsv. Treat the configured workspace as the project "
     "workspace. Summarize current best result, active or blocked state, and "
     "next concrete action before editing or running long commands. Continue "
     "exactly one autoresearch loop iteration unless blocked."

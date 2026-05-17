@@ -8,11 +8,11 @@
         },
         "edit": {
             "*": "allow",
-            "myautoresearch/config/program.md": "deny",
-            "myautoresearch/config/project.md": "deny",
-            "myautoresearch/scripts/**": "deny",
-            "myautoresearch/opencode.json": "ask",
-            "myautoresearch/config/autoresearch.config.json": "ask"
+            "my-autoresearch/config/program.md": "deny",
+            "my-autoresearch/config/project.md": "deny",
+            "my-autoresearch/scripts/**": "deny",
+            "my-autoresearch/opencode.json": "ask",
+            "my-autoresearch/config/autoresearch.config.json": "ask"
         }
     }
 }

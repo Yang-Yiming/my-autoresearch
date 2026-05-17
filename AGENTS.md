@@ -1,4 +1,4 @@
-# myautoresearch
+# my-autoresearch
 
 This directory is a reusable autoresearch harness embedded inside a host
 project.

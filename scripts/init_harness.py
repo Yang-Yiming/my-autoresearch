@@ -63,7 +63,7 @@ def render_template(template_text: str, values: dict[str, str]) -> str:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Render myautoresearch init templates.")
+    parser = argparse.ArgumentParser(description="Render my-autoresearch init templates.")
     parser.add_argument(
         "--config",
         type=Path,
